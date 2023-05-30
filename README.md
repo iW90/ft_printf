@@ -10,7 +10,7 @@ Neste projeto é recriada parte da famosa função **printf** da biblioteca **st
 
 | Specifiers | Descrição |
 |:---:|:---|
-|——————|———————————————————————————————————————————————————|
+|——————|———————————————————————————————————————————|
 | `%%` | Imprime '%' na tela. |
 | `%c` | Imprime um caractere. |
 | `%s` | Imprime uma string. |
@@ -25,7 +25,7 @@ Neste projeto é recriada parte da famosa função **printf** da biblioteca **st
 
 | Flag | Descrição |
 |:---:|:---|
-|——————|———————————————————————————————————————————————————|
+|——————|———————————————————————————————————————————|
 | `#` | \[**Bônus**]: Imprime '**0x**' ou '**0X**' na frente do hexadecimal quando usado com `%x` ou  `%X`, respectivamente. |
 
 ## Compilação e Execução
@@ -64,7 +64,7 @@ Estes são opcionais, por isso não foram implementados, mas segue uma explicaç
 
 | Flag | Descrição |
 |:---:|:---|
-|——————|———————————————————————————————————————————————————|
+|——————|———————————————————————————————————————————|
 | `-` | Justifica o resultado à esquerda dentro do campo (é justificado à direita por padrão). |
 | `+` | Força a preceder o resultado com um sinal de mais ou menos (+ ou -), mesmo para números positivos (normalmente apenas números negativos são precedidos por um sinal). |
 | ` ` | Se não houver sinal, um espaço é anexado ao início do resultado. |
@@ -75,7 +75,7 @@ Estes são opcionais, por isso não foram implementados, mas segue uma explicaç
 
 | Width | Descrição |
 |:---:|:---|
-|——————|———————————————————————————————————————————————————|
+|——————|———————————————————————————————————————————|
 | *\<number>* | Número mínimo de caracteres a serem impressos. Se o valor a ser impresso for menor que esse número, o resultado será preenchido com espaços em branco. O valor não é truncado mesmo se o resultado for maior. |
 | `*` | A largura não é especificada como formato na string, mas como um argumento de valor inteiro adicional precedendo o argumento que deve ser formatado. |
 
@@ -83,7 +83,7 @@ Estes são opcionais, por isso não foram implementados, mas segue uma explicaç
 
 | Precision | Descrição |
 |:---:|:---|
-|——————|———————————————————————————————————————————————————|
+|——————|———————————————————————————————————————————|
 | `.`*\<number>* | Para especificadores inteiros (`d`, `i`, `u`, `x`, `X`), a precisão especifica o número mínimo de dígitos a serem escritos. Se o valor a ser escrito for menor que esse número, o resultado será preenchido com zeros à esquerda. O valor não é truncado, mesmo que o resultado seja mais longo. Uma precisão de 0 significa que nenhum caractere é escrito para o valor 0. Para `s`, este é o número máximo de caracteres a serem impressos (por padrão, todos os caracteres são impressos até que o caractere nulo final seja encontrado). Para o tipo `c`, não tem efeito. Quando nenhuma precisão é especificada, o padrão é 1. Se o período for especificado sem um valor explícito para precisão, 0 será assumido. |
 | `.(*)` | A precisão não é especificada como formato na string, mas como um argumento de valor inteiro adicional precedendo o argumento que deve ser formatado. |
 
