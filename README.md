@@ -4,7 +4,9 @@
 
 Neste projeto é recriada parte da famosa função **printf** da biblioteca **stdio.h**. A **ft_printf** deve ser capaz de formatar e imprimir na tela diferentes tipos de dados como strings, caracteres, inteiros, hexadecimais e ponteiros. Aqui a lição é sobre `variadic arguments`, que nos permite variar a quantidade de parâmetros que podem ser passadas para uma função. O bônus aborda as flags que podemos utilizar para formatar as saídas do **printf**. Assim como os dois projetos anteriores, a **ft_prinft** poderá ser utilizada em projetos futuros.
 
-## Especificadores e Flag implementadas <img src="https://img.shields.io/badge/GRADE-102%2F100-green" align="right">
+### <img src="https://img.shields.io/badge/GRADE-102%2F100-green" align="right">
+
+## Especificadores e Flag implementadas 
 
 ### Format Specifiers
 
