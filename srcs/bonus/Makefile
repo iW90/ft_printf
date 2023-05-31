@@ -3,35 +3,38 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: inwagner <inwagner@student.42.fr>          +#+  +:+       +#+         #
+#    By: inwagner <inwagner@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/19 19:58:12 by inwagner          #+#    #+#              #
-#    Updated: 2022/12/24 09:43:21 by inwagner         ###   ########.fr        #
+#    Updated: 2023/04/16 20:46:08 by inwagner         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= libftprintf.a
-FLAG	= -Wall -Wextra -Werror
-HDR		= -I ./includes/
-PRE		= ./src/
-FTS 	= ft_printf_aux.c ft_printf.c
-SRC		= $(addprefix ${PRE}, ${FTS})
-OBJS	= $(FTS:.c=.o)
+# VARIABLES
+NAME	:=	ft_printf.a
+FLAG	:=	-Wall -Wextra -Werror
+HDR		:=	-I ./includes/
+SRC		:=	./srcs/
+OSRC	:=	./objs/
+FTS 	:=	ft_printf_aux_bonus.c ft_printf_bonus.c
+OBJS	:=	$(FTS:%.c=$(OSRC)%.o)
 
 all: $(NAME)
 
+# Compile Objects
 $(NAME): $(OBJS)
-	@ar -rcs $(NAME) $(addprefix ./objs/, $(OBJS))
+	@ar -rcs $(NAME) $(OBJS)
 
-%.o: ./src/%.c
+# Make Objects
+$(OSRC)%.o: $(SRC)%.c
 	@mkdir -p objs
-	@cc $(FLAG) $(HDR) -c $< -o ./objs/$@
+	@cc $(CFLAG) $(HDR) -c $< -o $@
 
 clean:
-	@rm -rdf ./objs
+	@[ -d $(OSRC) ] && rm -rf $(OSRC) || [ -f Makefile ]
 
 fclean:	clean
-	@rm -rf $(NAME)
+	@[ -f ./$(NAME) ] && rm $(NAME) && echo $(NAME) cleaned ||  [ -f Makefile ]
 
 re: fclean all
 
