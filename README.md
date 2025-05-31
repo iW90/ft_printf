@@ -1,6 +1,6 @@
 # 42 Cursus - ft_printf
 
-<img src="https://game.42sp.org.br/static/assets/achievements/ft_printfm.png" alt="completion-with-bonus-badge" align="left">
+<img src="./assets/ft_printfm.png" alt="completion-with-bonus-badge" align="left">
 
 Neste projeto é recriada parte da famosa função **printf** da biblioteca **stdio.h**. A **ft_printf** deve ser capaz de formatar e imprimir na tela diferentes tipos de dados como strings, caracteres, inteiros, hexadecimais e ponteiros. Aqui a lição é sobre `variadic arguments`, que nos permite variar a quantidade de parâmetros que podem ser passadas para uma função. O bônus aborda as flags que podemos utilizar para formatar as saídas do **printf**. Assim como os dois projetos anteriores, a **ft_prinft** poderá ser utilizada em projetos futuros.
 
